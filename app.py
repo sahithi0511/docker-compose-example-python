@@ -1,10 +1,10 @@
 import time
 
-import nginx
+import reddis
 from flask import Flask
 
 app = Flask(__name__)
-cache = redis.Nginx(host='nginx', port=8080)
+cache = redis.Reddis(host='reddis', port=8080)
 
 
 def get_hit_count():
